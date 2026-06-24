@@ -1,0 +1,30 @@
+{
+  "name": "@repo/payload-config",
+  "type": "module",
+  "scripts": {
+    "type:check": "tsc --noEmit",
+    "lint": "biome format --write",
+    "test": "vitest run",
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation PAYLOAD_CONFIG_PATH=./src/payload.config.ts payload generate:types"
+  },
+  "dependencies": {
+    "@payloadcms/next": "catalog:",
+    "@payloadcms/richtext-lexical": "catalog:",
+    "@payloadcms/ui": "catalog:",
+    "cross-env": "catalog:",
+    "dotenv": "catalog:",
+    "graphql": "catalog:",
+    "next": "catalog:",
+    "payload": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "sharp": "catalog:",
+    "@payloadcms/db-mongodb": "catalog:",
+    "@repo/typescript-config": "workspace:*"
+  },
+  "exports": {
+    ".": "./src/payload.config.ts",
+    "./payload-types": "./payload-types.ts",
+    "./collections/*": "./src/collections/*"
+  }
+}
