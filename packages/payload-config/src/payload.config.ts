@@ -1,7 +1,7 @@
+import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
-import path from 'path'
 import type { Config } from 'payload'
 import { buildConfig } from 'payload'
 import sharp from 'sharp'

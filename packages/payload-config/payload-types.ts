@@ -65,7 +65,7 @@ export interface Config {
   auth: {
     users: UserAuthOperations
   }
-  blocks: {}
+  blocks: object
   collections: {
     users: User
     media: Media
@@ -75,7 +75,7 @@ export interface Config {
     'payload-preferences': PayloadPreference
     'payload-migrations': PayloadMigration
   }
-  collectionsJoins: {}
+  collectionsJoins: object
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>
     media: MediaSelect<false> | MediaSelect<true>
@@ -95,8 +95,8 @@ export interface Config {
     defaultIDType: string
   }
   fallbackLocale: null
-  globals: {}
-  globalsSelect: {}
+  globals: object
+  globalsSelect: object
   locale: null
   widgets: {
     collections: CollectionsWidget
@@ -180,6 +180,7 @@ export interface Page {
     root: {
       type: string
       children: {
+        // biome-ignore lint/suspicious/noExplicitAny: This is a generated type file
         type: any
         version: number
         [k: string]: unknown
