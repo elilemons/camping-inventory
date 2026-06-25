@@ -1,3 +1,3 @@
-import { configurePayload } from "@repo/payload-config";
+import { configurePayload } from '@repo/payload-config'
 
-export default configurePayload();
+export default configurePayload()
