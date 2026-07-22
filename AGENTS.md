@@ -4,6 +4,7 @@ Before planning or implementing product work, read [docs/product.md](docs/produc
 
 When working in this repository:
 
+- Use Bun exclusively. Use `bun`, `bun run`, and `bunx`; do not use `npm`, `npx`, Yarn, or pnpm.
 - Preserve the established monorepo architecture and app boundaries.
 - Make the smallest change that solves the requested task.
 - Avoid unrelated refactors, cleanup, or formatting-only changes.

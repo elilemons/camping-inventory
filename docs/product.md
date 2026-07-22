@@ -2,13 +2,13 @@
 
 ## Vision
 
-Build a camping inventory app that helps campers plan, pack, and adjust trip supplies without rewriting the same lists by hand every time trip details change.
+Build a camping inventory app that helps campers track what they own, where items are stored, organize gear into containers, plan trips from reusable inventory, and eventually understand how gear should fit into and be loaded into a vehicle.
 
 The product should stay simple, practical, and durable:
 
 - treat the GitHub repo as the permanent source of truth
 - capture decisions in repo docs and backlog items
-- support reusable packing lists with trip-aware quantities
+- support reusable inventory with trip-aware quantities
 
 ## Target User
 
@@ -32,13 +32,16 @@ In scope for the first version:
 
 Out of scope for now:
 
-- implementation of the application features themselves
 - advanced automation beyond the agreed quantity modes
 - product areas not yet captured in the backlog
 
 ## Agreed Features
 
 - reusable packing lists
+- inventory tracking with storage locations
+- gear organization into containers
+- trip planning from reusable inventory
+- future vehicle packing guidance as a product direction
 - trip-based quantity recalculation
 - support for different quantity modes per item
 - recorded product decisions in repo docs rather than chat memory

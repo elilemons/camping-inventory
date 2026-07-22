@@ -15,3 +15,10 @@ Allow packing list item quantities to recalculate from trip details so the same 
 - The UI or data model clearly distinguishes fixed quantities from calculated quantities.
 - The feature works without requiring the user to rewrite reusable lists for each trip.
 
+## 2. Inventory locations and containers
+
+Capture future work for tracking where gear is stored and how it is grouped, without designing the implementation yet.
+
+## 3. Vehicle packing guidance
+
+Capture future work for helping users reason about how gear fits into and should be loaded into a vehicle, without prematurely defining the UX or algorithms.
