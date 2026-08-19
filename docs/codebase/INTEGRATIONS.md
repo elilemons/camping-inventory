@@ -30,7 +30,7 @@ The intended Capacitor and Vercel integrations are recorded in `docs/knowledge-b
 - Retry and backoff behavior: no explicit retry or backoff logic found in the web or mobile API wrappers.
 - Timeout policy: no request timeout configuration found.
 - Circuit breaker or fallback behavior: no circuit breaker found; web API URL has a localhost fallback and the client renders an error state when a request fails.
-- CORS: Payload allows the local web development origins configured in the shared Payload configuration. Native production origins and API deployment settings remain deployment concerns.
+- CORS: Payload allows the local web development origins plus Capacitor's default Android (`https://localhost`) and iOS (`capacitor://localhost`) origins. Native production origins and API deployment settings remain deployment concerns.
 
 ## 5) Observability for Integrations
 
