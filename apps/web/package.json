@@ -6,10 +6,20 @@
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",
-    "start": "next start",
+    "cap:add:android": "bunx cap add android",
+    "cap:add:ios": "bunx cap add ios",
+    "cap:open:android": "bunx cap open android",
+    "cap:open:ios": "bunx cap open ios",
+    "cap:run:android": "bunx cap run android",
+    "cap:run:ios": "bunx cap run ios",
+    "cap:sync": "bun run build && bunx cap sync",
+    "start": "bunx serve out",
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@capacitor/android": "^8.5.0",
+    "@capacitor/core": "^8.5.0",
+    "@capacitor/ios": "^8.5.0",
     "@repo/ui": "workspace:*",
     "@tanstack/react-query": "catalog:",
     "next": "catalog:",
@@ -17,6 +27,7 @@
     "react-dom": "catalog:"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.5.0",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "catalog:",
     "@types/react": "catalog:",

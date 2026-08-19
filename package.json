@@ -8,7 +8,6 @@
     "dev:payload": "turbo run dev --filter=payload",
     "dev:web": "turbo run dev --filter=web",
     "dev:docs": "turbo run dev --filter=docs",
-    "dev:mobile": "turbo run dev --filter=mobile",
     "lint": "biome lint",
     "format": "biome format --write",
     "format-and-lint": "biome check",
