@@ -2,6 +2,8 @@
 
 Before planning or implementing product work, read [docs/product.md](docs/product.md) and use it as the source of truth for the product vision, scope, and recorded decisions.
 
+Read [docs/knowledge-base.md](docs/knowledge-base.md) for collaboration expectations, engineering direction, naming conventions, and the standard issue workflow.
+
 When working in this repository:
 
 - Use Bun exclusively. Use `bun`, `bun run`, and `bunx`; do not use `npm`, `npx`, Yarn, or pnpm.
