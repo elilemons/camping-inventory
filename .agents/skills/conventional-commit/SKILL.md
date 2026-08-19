@@ -17,7 +17,7 @@ description: 'Prompt and workflow for generating conventional commit messages us
 2. Run `git diff` or `git diff --cached` to inspect changes.
 3. Stage your changes with `git add <file>`.
 4. Construct your commit message using the following XML structure.
-5. After generating your commit message, Copilot will automatically run the following command in your integrated terminal (no confirmation needed):
+5. After generating your commit message, ask the user for explicit confirmation before running the following command in the integrated terminal:
 
 ```bash
 git commit -m "type(scope): description"
