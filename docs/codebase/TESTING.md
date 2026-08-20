@@ -31,7 +31,7 @@ No root test script is defined. The Payload package scripts and Playwright web-s
 | Integration | Yes, minimally | Payload collection access through `getPayload` | `api.int.spec.ts` checks that users can be fetched |
 | E2E | Yes, minimally | Payload admin navigation and starter frontend page | `admin.e2e.spec.ts`, `frontend.e2e.spec.ts` |
 | Web product interface behavior | No evidence | `[TODO]` Product workflows | `apps/web` has no test directory in the current tree |
-| Mobile behavior | No evidence | `[TODO]` Capacitor behavior after migration | Current mobile application has no test directory |
+| Capacitor behavior | No evidence | `[TODO]` Native shell behavior after migration | Native platform projects currently have no dedicated test suite |
 
 ## 4) Mocking and Isolation Strategy
 

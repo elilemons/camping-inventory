@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
+# Camping Inventory web and Capacitor application
 
-## Getting Started
+`apps/web` is the shared Next.js interface for browser and mobile use. Its production build is a static export consumed by Capacitor's iOS and Android projects.
 
-First, run the development server:
+## Browser development
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```sh
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3001` in a browser. The web API uses `NEXT_PUBLIC_API_URL`, defaulting to `http://localhost:3000/api`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Capacitor development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load Inter, a custom Google Font.
+The permanent application identifier is `com.elilemons.campinginventory`. Set `NEXT_PUBLIC_API_URL` to a Payload URL reachable from the device before building native assets.
 
-## Learn More
+```sh
+bun run cap:add:ios
+bun run cap:add:android
+bun run cap:sync
+bun run cap:open:ios
+bun run cap:open:android
+```
 
-To learn more about Next.js, take a look at the following resources:
+`cap:sync` builds the static web output into `out/` and synchronizes it into both native projects. The Payload application remains a separate backend and is not bundled into the native assets.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For local live reload, run one command from the repository root. It detects the Mac's LAN address, starts Payload and Next.js, configures the device API URL, and launches the selected native target:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+bun run dev:capacitor android
+bun run dev:capacitor ios
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The emulator or device must be on the same network as the development computer. Set `CAPACITOR_DEV_HOST` when automatic LAN address detection selects the wrong interface.

@@ -56,6 +56,7 @@ Current direction:
 - Vitest covers custom logic and expected interface behavior.
 - Playwright covers end-to-end behavior.
 - Capacitor is the target native application runtime. It wraps the web application for distribution through mobile app stores; it is not a replacement user-interface framework.
+- The Capacitor project lives under `apps/web` with `webDir: out` and application identifier `com.elilemons.campinginventory`.
 - Tailwind CSS is the styling system.
 - Components should use the neobrutalism.com component library where appropriate.
 
@@ -63,9 +64,8 @@ Current direction:
 
 The repository currently contains:
 
-- `apps/web`: a Next.js web application.
+- `apps/web`: the shared Next.js web application and Capacitor project source.
 - `apps/payload`: a Payload application with Next.js routes and tests.
-- `apps/mobile`: the current Expo and React Native application, which is scheduled for removal.
 - `apps/docs`: a documentation application.
 - `packages/ui`: a shared React component package.
 - `packages/payload-config`: shared Payload configuration and generated types.
@@ -75,12 +75,11 @@ These are observations of the current codebase, not a final architecture decisio
 
 Architecture transition:
 
-- Current state: the repository has a native application based on React Native and Expo under `apps/mobile`.
-- Target state: remove `apps/mobile`; keep the web application as the shared product interface; add a likely `services/capacitor` workspace that wraps the web application for iOS and Android distribution.
+- Current state: the repository uses `apps/web` as the shared browser interface and Capacitor source for iOS and Android.
+- Target state: build `apps/web` as a static export and synchronize its output into the native platform projects under that application.
 - Payload remains a separate application and continues to own application data.
-- Capacitor-specific native integrations should live in the Capacitor workspace or its plugins, not in the shared web interface.
-- This transition is an architectural change and should be planned and reviewed separately before feature work that depends on it.
-- Do not implement this migration merely because it is documented here; treat this section as the agreed direction until a dedicated issue or plan is approved.
+- Capacitor-specific native integrations should live in the generated platform projects or Capacitor plugins, not in the shared web interface.
+- The initial native shell intentionally adds no unrelated plugins, offline storage, or store deployment configuration.
 
 ## Language and naming
 

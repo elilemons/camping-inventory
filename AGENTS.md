@@ -8,10 +8,12 @@ When working in this repository:
 
 - Use Bun exclusively. Use `bun`, `bun run`, and `bunx`; do not use `npm`, `npx`, Yarn, or pnpm.
 - Preserve the established monorepo architecture and app boundaries.
+- The shared product interface lives in `apps/web`; Capacitor wraps its static output for iOS and Android, while Payload remains a separate backend.
 - Make the smallest change that solves the requested task.
 - Avoid unrelated refactors, cleanup, or formatting-only changes.
 - Run the relevant tests or checks for the area you touched before handing work back.
 - Prefer existing patterns and package conventions over introducing new ones.
+- Use the `apps/web` Capacitor scripts for native builds and synchronization; do not add a second native user-interface implementation.
 - If a request would change scope, assumptions, or product direction, confirm before proceeding.
 
 For product work specifically:

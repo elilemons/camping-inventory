@@ -65,6 +65,8 @@ Users must authenticate before creating meaningful saved data. Before authentica
 
 Auth0 is the intended authentication provider, using the Auth0 Next.js integration for the web application. The web application and Capacitor wrapper obtain an Auth0 access token minted for the Payload API, pass it to Payload as a bearer token, and use the resulting authenticated Payload user context for authorization. The client must not send an Auth0 identity token or the Next.js session cookie as the Payload API credential. Payload authentication remains for access to the Payload admin application. Product records must be authorized against the authenticated user's ownership.
 
+The responsive Next.js application is the single product interface for browser and mobile use. Capacitor packages its static output for iOS and Android using application identifier `com.elilemons.campinginventory`; Payload is not bundled into the native application.
+
 On first authenticated product use, the system should create a matching Payload user automatically. If a matching Payload user is unexpectedly missing later, the system should create it rather than leaving the authenticated user without an owner record.
 
 Users should be able to delete their account and associated personal data. This is a product requirement; the exact legal retention and deletion obligations require separate compliance review.

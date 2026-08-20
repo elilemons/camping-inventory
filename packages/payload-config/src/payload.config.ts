@@ -31,7 +31,12 @@ export const payloadConfig: Config = {
   }),
   sharp,
   plugins: [],
-  cors: ['http://localhost:3001', 'http://localhost:3002', 'exp://*'],
+  cors: [
+    'http://localhost:3001',
+    'http://localhost:3002',
+    'https://localhost',
+    'capacitor://localhost',
+  ],
 }
 export const configurePayload = (overrides?: Partial<Config>) =>
   buildConfig({

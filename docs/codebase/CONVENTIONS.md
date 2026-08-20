@@ -7,7 +7,7 @@
 | Framework files | Follow framework-required names | `page.tsx`, `layout.tsx`, `route.ts` | `apps/web/app`, `apps/payload/src/app` |
 | Shared component files | Lowercase file names are used | `packages/ui/src/button.tsx` | `packages/ui/src` |
 | Payload collections | PascalCase file and export names are used | `Users.ts`, `Media.ts`, `Pages` | `packages/payload-config/src/collections` |
-| Functions | camelCase names | `fetchHomePage`, `usePageBySlug`, `configurePayload` | `apps/web/lib`, `apps/mobile/lib`, `packages/payload-config/src` |
+| Functions | camelCase names | `fetchHomePage`, `usePageBySlug`, `configurePayload` | `apps/web/lib`, `packages/payload-config/src` |
 | Components | PascalCase names | `Home`, `Providers`, `Button`, `Card` | `apps/web/app`, `apps/web/lib`, `packages/ui/src` |
 | Types and interfaces | PascalCase names | `ButtonProps`, `LoginOptions`, `Config` | `packages/ui/src/button.tsx`, `apps/payload/tests/helpers/login.ts`, Payload configuration |
 | Environment variables | Uppercase snake case | `DATABASE_URL`, `PAYLOAD_SECRET`, `NEXT_PUBLIC_API_URL` | `apps/payload/.env.example`, source files |
@@ -29,8 +29,8 @@
 
 ## 4) Error and Logging Conventions
 
-- API wrappers throw a new `Error` when `fetch` returns a non-success response, as shown in `apps/web/lib/api.ts` and `apps/mobile/lib/api.ts`.
-- Client pages render loading, error, and empty states directly, as shown in `apps/web/app/page.tsx` and `apps/mobile/App.tsx`.
+- API wrappers throw a new `Error` when `fetch` returns a non-success response, as shown in `apps/web/lib/api.ts`.
+- Client pages render loading, error, and empty states directly, as shown in `apps/web/app/page.tsx`.
 - No application logging library or structured logging convention was found. `[TODO]` Define logging expectations when production workflows are introduced.
 - No explicit sensitive-data redaction convention was found. `[TODO]` Define redaction requirements before adding authentication or sensitive inventory data.
 
