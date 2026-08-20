@@ -30,7 +30,7 @@
 | Concern | Evidence | Current symptom | Scaling risk | Suggested improvement |
 |---------|----------|-----------------|--------------|----------------------|
 | Client-side home-page request in the web application | `apps/web/app/page.tsx`, `apps/web/lib/hooks.ts` | The page is marked `'use client'` and fetches after render | More client loading and network work than necessary if the page can be server-rendered | Reassess data flow when the product page architecture is designed |
-| Pages endpoint requests up to 100 records without pagination strategy | `apps/web/lib/api.ts`, `apps/mobile/lib/api.ts` | `limit=100` is hard-coded | Larger datasets may increase response and rendering cost | Define pagination or query boundaries for inventory workflows |
+| Pages endpoint requests up to 100 records without pagination strategy | `apps/web/lib/api.ts` | `limit=100` is hard-coded | Larger datasets may increase response and rendering cost | Define pagination or query boundaries for inventory workflows |
 | No performance testing or instrumentation was found during the repository scan | `package.json`, `turbo.json`, repository tree | No baseline exists | Regressions may be discovered late | Add targeted performance checks after core workflows exist |
 
 ## 5) Fragile/High-Churn Areas

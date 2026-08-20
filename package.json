@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "clean": "rimraf node_modules packages/*/node_modules apps/*/node_modules .turbo apps/*/.next apps/*/.expo apps/*/dist packages/*/dist",
+    "clean": "rimraf node_modules packages/*/node_modules apps/*/node_modules .turbo apps/*/.next apps/*/dist packages/*/dist",
     "dev": "turbo run dev",
     "dev:payload": "turbo run dev --filter=payload",
     "dev:web": "turbo run dev --filter=web",
