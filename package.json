@@ -7,6 +7,7 @@
     "dev": "turbo run dev",
     "dev:payload": "turbo run dev --filter=payload",
     "dev:web": "turbo run dev --filter=web",
+    "dev:capacitor": "bun scripts/dev-capacitor.ts",
     "dev:docs": "turbo run dev --filter=docs",
     "lint": "biome lint",
     "format": "biome format --write",
